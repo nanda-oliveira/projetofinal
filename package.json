@@ -1,0 +1,24 @@
+{
+  "name": "projetofinal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanda-oliveira/projetofinal.git"
+  },
+  "author": "fernanda oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nanda-oliveira/projetofinal/issues"
+  },
+  "homepage": "https://github.com/nanda-oliveira/projetofinal#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "nodemon": "^2.0.6"
+  }
+}
