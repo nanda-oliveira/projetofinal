@@ -8,4 +8,14 @@ router.get("/", function(request,response){
     })
 })
 
-module.exports = router
+module.exports = router 
+
+
+/*const express = require("express")
+const router = express.Router()
+
+router.get('/', function (req, res) {
+    res.send('Birds home page')
+  })
+
+module.exports = router*/

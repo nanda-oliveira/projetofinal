@@ -2,9 +2,9 @@ const mongoose = require("mongoose")
 const Schema = mongoose.Schema
 
 const postagemSchema = new Schema({
-    _id : {
+    usuarioId : {
         type : mongoose.Schema.Types.ObjectId,
-        auto : true,
+        ref :"usuario",
         required: true
     },
 
