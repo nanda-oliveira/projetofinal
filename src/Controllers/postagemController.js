@@ -1,7 +1,7 @@
 const {request, response } = require("express");
 const mongoose = require("mongoose");
-const postagemCollections = require("../Models/postagemSchema");
-const postagemCollection = require("../Models/postagemSchema");
+const postagemCollections = require("../models/postagemSchema");
+const postagemCollection = require("../models/postagemSchema");
 
 
 const getAllPostagens = (req,res)=>{

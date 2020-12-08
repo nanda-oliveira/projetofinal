@@ -1,6 +1,6 @@
 const {request, response } = require("express");
 const mongoose = require("mongoose");
-const usuarioCollection = require("../Models/usuarioSchema")
+const usuarioCollection = require("../models/usuarioSchema")
 
 const getAllUsers = (req,res)=>{
     console.log(req.url)

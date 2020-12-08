@@ -1,6 +1,6 @@
 const express = require ("express");
 const router = express.Router();
-const controller = require("../Controllers/usuarioController");
+const controller = require("../controllers/usuarioController");
 
 router.get("/usuarios", controller.getAllUsers)//http://localhost:3030/usuario/usuarios/
 router.get("/nome", controller.getByName) // http://localhost:3030/usuario/nome

@@ -9,7 +9,7 @@ const usuarioSchema = new Schema({
         required: true
     },
 
-    nome: {
+    nome : {
         type: String,
         required: true
     },
@@ -20,7 +20,7 @@ const usuarioSchema = new Schema({
     },
 
     dataNascimento: {
-        type: Date,
+        type: String,
         required: true
     },
 
@@ -30,14 +30,9 @@ const usuarioSchema = new Schema({
     }, 
 
    usuario: {
-        type: ['familia', 'professor', 'aluno'],
+        type: ['familia', 'professor'],
         required: true
-    }, 
-
- serieEscolar : {
-     type : String,
-     required: true
- }
+    }
 
 
 })
