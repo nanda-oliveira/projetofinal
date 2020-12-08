@@ -8,6 +8,7 @@ const db = require("./config/repository");
 const index = require("./routes/index");
 const usuario = require ("./routes/usuarioRoute");
 const postagem = require ("./routes/postagemRoute");
+const aluno = require ("./routes/alunoRoute");
 
 db.connect();
 
@@ -24,5 +25,6 @@ app.use(
 app.use("/", index);
 app.use("/usuario", usuario);
 app.use("/postagem", postagem);
+app.use("/aluno",aluno);
 
 module.exports = app

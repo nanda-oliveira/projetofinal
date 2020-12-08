@@ -37,6 +37,6 @@ briquedoFavorito : {
 
 })
 
-const  alunoCollections = mongoose.model('aluno', aluno)
+const  alunoCollections = mongoose.model('aluno', alunoSchema)
 
 module.exports = alunoCollections
