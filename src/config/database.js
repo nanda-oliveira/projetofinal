@@ -1,9 +1,12 @@
 const mongoose = require("mongoose")
 
-const DB_URL = "mongodb://localhost:27017/projetofinal"
+
+const dotenv = require('dotenv')
+dotenv.config()
+const MONGO_URI  = process.env.MONGO_URI || "mongodb://localhost:27017/projetofinal";
 
 const connect = ()=>{
-    mongoose.connect(DB_URL,
+    mongoose.connect(MONGO_URI,
         {useNewUrlParser:true,
         useCreateIndex: true,
         useFindAndModify : false,
