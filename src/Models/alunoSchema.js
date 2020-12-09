@@ -21,7 +21,7 @@ dataNascimento : {
 
 fotoPerfil:{
     type: String,
-    required: true
+    required: false
 }, 
 
 serieEscolar : {
@@ -29,7 +29,7 @@ serieEscolar : {
     required: true
 },
 
-briquedoFavorito : {
+brinquedoFavorito : {
     type: String,
     required: true
 }

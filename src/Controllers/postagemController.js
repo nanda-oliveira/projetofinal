@@ -25,6 +25,7 @@ const addPostagem = (req,res) =>{
 
     postagem.save((error)=>{
         if(error){
+            console.log(error)
             return res.status(400).send("Adicione todas as informacoes corretamente")
         }else{
             return res.status(200).send({
@@ -65,8 +66,8 @@ const updatePostagem = (req,res)=>{
                 })
             }else{
                 return res.status(200).send({
-                    mensagem :"Postagem atualizada com sucesso",
-                    contato
+                    mensagem :"Postagem atualizada com sucesso"
+                    
                 })
             }
         }

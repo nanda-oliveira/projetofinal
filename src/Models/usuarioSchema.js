@@ -20,7 +20,7 @@ const usuarioSchema = new Schema({
     },
 
     dataNascimento: {
-        type: String,
+        type: Date,
         required: true
     },
 

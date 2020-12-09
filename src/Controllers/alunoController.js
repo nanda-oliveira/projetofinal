@@ -1,12 +1,27 @@
 const mongoose = require("mongoose");
 const alunoCollection = require("../models/alunoSchema")
 
+
+const getAluno = (req,res)=>{
+  
+    alunoCollection.find((error,aluno)=>{
+        if(error){
+            return res.status(500).send(error)
+       }else{
+           return res.status(200).send({
+               aluno
+           })
+       }
+    })
+}
+
 const addAluno = (req, res) =>{
-    const alunoBody = req.alunoBody
+    const alunoBody = req.body
     const aluno = new alunoCollection(alunoBody)
 
     aluno.save((error)=>{
-        if(Error){
+        if(error){
+            console.log(error)
             return res.status(400).send("Adicione as informações de cadastro corretamente!")
         }else{
             return res.status(200).send({
@@ -50,7 +65,7 @@ const updateAluno = (req,res) =>{
             }else{
                 return res.status(200).send({
                     mensagem: "Cadastro do aluno atualizado com sucesso!",
-                    aluno
+                    aluno 
                 })
             }
         }
@@ -61,5 +76,6 @@ const updateAluno = (req,res) =>{
 module.exports = {
     addAluno,
     deleteAluno,
-    updateAluno
+    updateAluno,
+    getAluno
 }

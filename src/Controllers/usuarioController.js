@@ -28,7 +28,7 @@ const getByName = (req, res)=>{
 }
 
 const addUser = (req,res) =>{
-    const userBody = req.userBody
+    const userBody = req.body
     const user = new usuarioCollection(userBody)
 
     user.save((error)=>{
@@ -56,23 +56,23 @@ const deleteUser = (req, res) =>{
 
 const updateUser = (req, res) =>{
     const idParam = req.query.id
-    const userBody = req.userBody
+    const userBody = req.body
     const userAtualizado = {new:true}
 
-    usuarioCollection.findByIdAndDelete(
+    usuarioCollection.findByIdAndUpdate(
         idParam,
         userBody,
         userAtualizado,
         (error,user)=>{
-            if(Error){
+            if(error){
                 return res.status(500).send({
                     mensagem: "Falha",
                     error
                 })
             }else{
                 return res.status(200).send({
-                    mensagem: "user atualizado com sucesso",
-                    user
+                    mensagem: "Usuario atualizado com sucesso",
+                    
                 })
             }
         }

@@ -2,9 +2,9 @@ const express = require("express");
 const router = express.Router();
 const controller = require("../controllers/alunoController")
 
-
-router.post("/criar", controller.addAluno)
+router.get("/alunos",controller.getAluno)
+router.post("/create", controller.addAluno)
 router.delete("/delete", controller.deleteAluno)
-router.patch("/atualizar", controller.updateAluno)
+router.patch("/update", controller.updateAluno)
 
 module.exports = router;
