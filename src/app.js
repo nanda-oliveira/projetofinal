@@ -3,12 +3,8 @@ const express = require('express');
 const app = express();
 const cors = require("cors");
 const bodyParser = require('body-parser');
-
 const db = require("./config/database");
-const index = require("./routes/index");
-const usuario = require ("./routes/usuarioRoute");
-const postagem = require ("./routes/postagemRoute");
-const aluno = require ("./routes/alunoRoute");
+
 
 db.connect();
 
@@ -17,6 +13,11 @@ app.use(express.json());
 
 app.use(bodyParser.urlencoded({extended:true}))
 
+
+const index = require("./routes/index");
+const usuario = require ("./routes/usuarioRoute");
+const postagem = require ("./routes/postagemRoute");
+const aluno = require ("./routes/alunoRoute");
 
 app.use("/", index);
 app.use("/usuario", usuario);

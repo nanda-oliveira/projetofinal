@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+//const mongoose = require("mongoose");
 const alunoCollection = require("../models/alunoSchema")
 
 
@@ -44,7 +44,6 @@ const deleteAluno = (req,res)=>{
         }
     })
 }
-
 
 const updateAluno = (req,res) =>{
     const idParam = req.query.id
