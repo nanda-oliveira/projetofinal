@@ -38,6 +38,6 @@ const usuarioSchema = new Schema({
 })
 
 
-const usuarioCollections = mongoose.model('usario', usuarioSchema)
+const usuarioCollections = mongoose.model('usuario', usuarioSchema)
 
 module.exports = usuarioCollections

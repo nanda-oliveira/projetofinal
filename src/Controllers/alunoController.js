@@ -1,4 +1,4 @@
-//const mongoose = require("mongoose");
+const mongoose = require("mongoose");
 const alunoCollection = require("../models/alunoSchema")
 
 
@@ -35,7 +35,7 @@ const addAluno = (req, res) =>{
 
 
 const deleteAluno = (req,res)=>{
-    const removerAluno = req.params.id
+    const removerAluno = req.query
     alunoCollection.findByIdAndDelete(removerAluno, (error, aluno)=>{
         if(error){
             return res.status(500).send(error)
@@ -46,7 +46,7 @@ const deleteAluno = (req,res)=>{
 }
 
 const updateAluno = (req,res) =>{
-    const idParam = req.query.id
+    const idParam = req.query
     const alunoBody = req.body
     const alunoAtualizado= {new:true}
 
