@@ -44,7 +44,7 @@ const addUser = (req,res) =>{
 }
 
 const deleteUser = (req, res) =>{
-    const removerUser = req.params.id
+    const removerUser = req.query
     usuarioCollection.findByIdAndDelete(removerUser, (error,user)=>{
         if (error){
             return res.status(500).send(error)
@@ -55,7 +55,7 @@ const deleteUser = (req, res) =>{
 }
 
 const updateUser = (req, res) =>{
-    const idParam = req.query.id
+    const idParam = req.params.id
     const userBody = req.body
     const userAtualizado = {new:true}
 
@@ -65,6 +65,7 @@ const updateUser = (req, res) =>{
         userAtualizado,
         (error,user)=>{
             if(error){
+                console.log(error)
                 return res.status(500).send({
                     mensagem: "Falha",
                     error
@@ -72,7 +73,7 @@ const updateUser = (req, res) =>{
             }else{
                 return res.status(200).send({
                     mensagem: "Usuario atualizado com sucesso",
-                    
+                    user
                 })
             }
         }

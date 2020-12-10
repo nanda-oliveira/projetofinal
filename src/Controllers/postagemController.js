@@ -50,7 +50,7 @@ const deletePostagem = (req,res)=>{
 }
 
 const updatePostagem = (req,res)=>{
-    const idParam = req.query.id
+    const idParam = req.params.id
     const postagemBody= req.body
     const postagemAtualizada = {new:true}
 

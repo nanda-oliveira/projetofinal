@@ -3,7 +3,7 @@ const alunoCollection = require("../models/alunoSchema")
 
 
 const getAluno = (req,res)=>{
-  
+    console.log(req.url)
     alunoCollection.find((error,aluno)=>{
         if(error){
             return res.status(500).send(error)
