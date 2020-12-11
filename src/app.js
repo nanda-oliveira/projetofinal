@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(bodyParser.json())
 
 
-const index = require("./routes/index");
+const index = require("../index");
 const usuario = require ("./routes/usuarioRoute");
 const postagem = require ("./routes/postagemRoute");
 const aluno = require ("./routes/alunoRoute");
