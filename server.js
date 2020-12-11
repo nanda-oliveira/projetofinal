@@ -8,4 +8,4 @@ app.listen(PORT,function(){
     console.log(`APP listening at http://localhost:${PORT}`)
 })
 
-module.exports =  app 
+//module.exports =  app 
